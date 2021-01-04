@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import { initialState } from '../../store/initialState/initialState';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -20,9 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const Product = () => {
     const classes = useStyles();
+    const {product} = initialState;
     return(
         <div>
-         <h4 className="proHead">Discover the Collection of Men's Shirts </h4>
+         <h4 className="proHead"> Discover the Collection of Men's T-Shirts </h4>
 
           <div className={classes.root}>
       <Grid container spacing={3}>
