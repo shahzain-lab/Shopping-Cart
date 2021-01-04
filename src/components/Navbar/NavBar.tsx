@@ -13,7 +13,9 @@ export const NavBar =()=> {
         <img src={gucci} alt="gucci logo" className="my-! mx-3" width="70rem"/>
 
         <div className="navCart">
+        
         <img src={shoppingCart} className=" cart" alt="cart"/>
+        <p>0</p>
         </div>
 </nav>
         </div>

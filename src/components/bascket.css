@@ -9,6 +9,18 @@
     border-radius: 50%;
     margin:0 .5rem;
 }
+.navCart p{
+    position:absolute;
+    bottom: 0;
+    right: 5%;
+    width: 1.7rem;
+    height: 1.7rem;
+    text-align: center;
+    background: #fbd80f;
+    border-radius: 50%;
+    color: #858282;
+    font-weight: bold;
+}
 .navCart img{
     width: 90%;
 }
