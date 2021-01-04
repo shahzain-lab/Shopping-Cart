@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
       color: theme.palette.text.secondary,
     },
   }),
@@ -28,7 +27,9 @@ export const Product = () => {
           <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
+          <Paper className={classes.paper}>
+              koku
+          </Paper>
         </Grid>
       </Grid>
     </div>
