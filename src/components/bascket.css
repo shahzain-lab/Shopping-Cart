@@ -13,3 +13,11 @@
     width: 90%;
 }
 /* ///Product */
+.proHead{
+    font-size: 2rem;
+    color: #c8c7c7;
+    width: 35%;
+    border-left: .6rem solid #3a3a3a;
+    border-bottom: 5px solid #3a3a3a;
+    margin: 1rem 2rem;
+}
