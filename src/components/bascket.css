@@ -1,0 +1,15 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.navCart{
+    background: #3a3a3a;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin:0 .5rem;
+}
+.navCart img{
+    width: 90%;
+}
+/* ///Product */
