@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const Product = () => {
     const classes = useStyles();
-    const {products} = useSelector((state: ProductTypes[]) => state)
+    const {products} = useSelector((state: ProductTypes) => state)
     return(
         <div>
          <h4 className="proHead"> Discover the Collection of Men's T-Shirts </h4>
@@ -30,7 +30,13 @@ export const Product = () => {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-           
+           {
+             products.map((product:ProductTypes, i:number) => (
+               <div key={i}>
+                    <img src={product.image} />
+               </div>
+             ))
+           }
           </Paper>
         </Grid>
       </Grid>
