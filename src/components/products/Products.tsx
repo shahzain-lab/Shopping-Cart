@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       padding: theme.spacing(2),
       margin: "2rem",
-      background: "#363535"
+      background: 'linear-gradient(90deg, rgba(55,54,54,1) 11%, rgba(154,150,150,1) 46%, rgba(83,83,83,1) 88%, rgba(103,103,103,1) 100%)'
+  
     },
   }),
 );
