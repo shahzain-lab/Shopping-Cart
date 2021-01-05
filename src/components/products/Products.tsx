@@ -11,34 +11,45 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
+    grid: {
+      display: 'flex',
+      justifyContent:'center',
+      width: "100%",
+      flexWrap:'wrap',
+    },
     paper: {
       padding: theme.spacing(2),
-      color: theme.palette.text.secondary,
+      margin: "2rem",
+      background: "#363535"
     },
   }),
 );
-
+interface ProductType{
+  products: ProductTypes[]
+}
 
 export const Product = () => {
     const classes = useStyles();
-    const {products} = useSelector((state: ProductTypes) => state)
+    const {products} = useSelector((state: ProductType) => state)
     return(
         <div>
          <h4 className="proHead"> Discover the Collection of Men's T-Shirts </h4>
 
           <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
+        <Grid item className={classes.grid} xs={12}>
+          
            {
              products.map((product:ProductTypes, i:number) => (
-               <div key={i}>
-                    <img src={product.image} />
-               </div>
+              <Paper className={classes.paper} key={i}>
+                    <img src={product.image} alt=""/>
+                    <hr />
+             <h3>{product.name}</h3>
+             
+             </Paper>
              ))
            }
-          </Paper>
-        </Grid>
+           </Grid>
       </Grid>
     </div>
          </div>
