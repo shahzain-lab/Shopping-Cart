@@ -1,8 +1,7 @@
 import React from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import { ProductTypes } from '../../types/Producttypes';
-//imgs
-import gucciCart from '../../images/gucciCart.jpg';
+
 //mat-ui
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
