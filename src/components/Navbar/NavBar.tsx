@@ -21,7 +21,7 @@ export const NavBar =()=> {
         product.added === true
     ).length
     return(
-        <div>
+        <Link to="/bascket">
           
             <nav className="navbar nav navbar-expand-lg navbar-dark bg-dark">
         <img src={gucci} alt="gucci logo" className="my-! mx-3" width="70rem"/>
@@ -32,6 +32,6 @@ export const NavBar =()=> {
     <p>{filterItem}</p>
         </div>
 </nav>
-        </div>
+        </Link>
     )
 }
