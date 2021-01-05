@@ -34,3 +34,13 @@
     border-bottom: 5px solid #3a3a3a;
     margin: 1rem 2rem;
 }
+.proDesc{
+    background: #2e2e2e;
+    border-left: 10px solid #797979;
+    padding: 1rem;
+}
+.proDesc p{
+    color: #adadad;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}

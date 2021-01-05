@@ -44,8 +44,13 @@ export const Product = () => {
               <Paper className={classes.paper} key={i}>
                     <img src={product.image} alt=""/>
                     <hr />
+                    <div className="proDesc">
              <h3>{product.name}</h3>
-             
+             <p>price: ${product.price}</p>
+             <button>
+               
+             </button>
+             </div>
              </Paper>
              ))
            }
