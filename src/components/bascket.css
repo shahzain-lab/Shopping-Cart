@@ -60,3 +60,12 @@
     width: 50%;
     height: 20rem;
 }
+.itemImg{
+    width:12%;
+    border: 2px solid #959595;
+    border-radius:50%;
+}
+.itemDiv h3{
+    font-size: 1.9rem;
+    color: #b8b8b8;
+}

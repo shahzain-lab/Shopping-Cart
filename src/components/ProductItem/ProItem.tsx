@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { ProductTypes } from '../../types/Producttypes';
 //imgs
 import gucciCart from '../../images/gucciCart.jpg';
@@ -7,6 +7,7 @@ import gucciCart from '../../images/gucciCart.jpg';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import { DECREMENT, INCREMENT } from '../../store/slices/ProductSlice';
 
 interface ProductType{
     products: ProductTypes[];
@@ -18,7 +19,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     paper: {
       padding: theme.spacing(2),
-      margin: "1rem",
+      display: 'flex',
+      margin: "2rem",
       background: "#363535"
     },
   }),
@@ -30,6 +32,7 @@ export const ProductItem = () => {
    const productFilter = products.filter(
      product => product.added === true
    )
+   const dispatch = useDispatch()
     return (
         <div>
            <div>
@@ -40,8 +43,23 @@ export const ProductItem = () => {
         <Grid item xs={7}>
           {
               productFilter.map((product, i:number) => (
-                  <Paper key={i}>
+                  <Paper className={classes.paper} key={i}>
                      <img src={product.image} alt="" className="itemImg"/>
+                     <div className="itemDiv">
+              <h3>{product.name}</h3>
+              {product.count > 1 ? (
+                  <span className="decrement" onClick={() => dispatch(DECREMENT(product.id))}>-</span>
+              ): (
+                  " "
+              )}
+              {product.count}
+              <span
+              className="increment"
+                onClick={() => dispatch(INCREMENT(product.id))}
+              >
+               +
+              </span>
+              </div>
                   </Paper>
               ))
           }
