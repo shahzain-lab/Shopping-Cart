@@ -65,7 +65,34 @@
     border: 2px solid #959595;
     border-radius:50%;
 }
+.itemDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logics{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .itemDiv h3{
+    /* padding-left: 15%; */
     font-size: 1.9rem;
     color: #b8b8b8;
+}
+.count{
+    color: #b8b8b8;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.decrement, .increment{
+    padding: 0 .5rem;
+    background: #5d5b5b;
+    color: #ffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
 }

@@ -7,7 +7,7 @@ import gucciCart from '../../images/gucciCart.jpg';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { DECREMENT, INCREMENT } from '../../store/slices/ProductSlice';
+import { DECREMENT, INCREMENT, DELETE } from '../../store/slices/ProductSlice';
 
 interface ProductType{
     products: ProductTypes[];
@@ -47,18 +47,22 @@ export const ProductItem = () => {
                      <img src={product.image} alt="" className="itemImg"/>
                      <div className="itemDiv">
               <h3>{product.name}</h3>
-              {product.count > 1 ? (
+            <span className="logics"> 
+                {product.count > 1 ? (
                   <span className="decrement" onClick={() => dispatch(DECREMENT(product.id))}>-</span>
               ): (
-                  " "
+                  <button className="decrement" disabled={true}>-</button>
               )}
-              {product.count}
+             <span className="count">{product.count}</span>
               <span
               className="increment"
                 onClick={() => dispatch(INCREMENT(product.id))}
               >
                +
               </span>
+              </span>
+              <span>${product.price * product.count}</span>
+              <span onClick={() => dispatch(DELETE(product.id))}>x</span>
               </div>
                   </Paper>
               ))
