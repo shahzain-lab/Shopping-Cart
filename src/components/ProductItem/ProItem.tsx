@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       display: 'flex',
       margin: "2rem",
-      background: "#363535"
+      background: "#363535",
+      borderRadius: '1.6rem'
     },
   }),
 );
@@ -51,7 +52,7 @@ export const ProductItem = () => {
                 {product.count > 1 ? (
                   <span className="decrement" onClick={() => dispatch(DECREMENT(product.id))}>-</span>
               ): (
-                  <button className="decrement" disabled={true}>-</button>
+                  <button className="decremented" disabled={true}>-</button>
               )}
              <span className="count">{product.count}</span>
               <span
@@ -61,16 +62,19 @@ export const ProductItem = () => {
                +
               </span>
               </span>
-              <span>${product.price * product.count}</span>
-              <span onClick={() => dispatch(DELETE(product.id))}>x</span>
+              <span className="price">$&nbsp;{product.price * product.count}</span>
+              <span className="delete" onClick={() => dispatch(DELETE(product.id))}>x</span>
               </div>
                   </Paper>
               ))
           }
         </Grid>
+        
       </Grid>
                </div> 
                </div>
+               {/* /right side// */}
+               <div></div>
                </div>
     )
 }

@@ -96,3 +96,30 @@
     border-radius: 7px;
     cursor: pointer;
 }
+.decremented{
+    padding: 0 .5rem;
+    background: #5d5b5b;
+    color: #ffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: not-allowed;
+}
+.price{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #959595;
+}
+.delete{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fffdfd;
+    border: 3px dotted #797979;
+    padding: .6% 6%;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .2s;
+}
+.delete:hover{
+    background: #4e4e4e;
+}

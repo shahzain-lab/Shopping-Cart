@@ -8,7 +8,7 @@ export const initialState: ProductTypes[] = [
         price: 420,
         image: images.shirt1,
         count: 1,
-        added: false
+        added: true
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ export const initialState: ProductTypes[] = [
         price: 320,
         image: images.shirt3,
         count: 1,
-        added: false
+        added: true
     },
     {
         id: 4,
