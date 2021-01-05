@@ -7,6 +7,8 @@ import '../bascket.css';
 ///toolkit
 import { useSelector } from 'react-redux';
 import { ProductTypes } from '../../types/Producttypes';
+///react router dom 
+import { Link } from 'react-router-dom';
 
 interface ProductType{
     products: ProductTypes[];
