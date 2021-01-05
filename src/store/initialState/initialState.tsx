@@ -1,7 +1,7 @@
-import React from 'react';
 import {images} from './images';
+import { ProductTypes } from '../../types/Producttypes';
 
-export const initialState = [
+export const initialState: ProductTypes[] = [
     {
         id: 1,
         name: "Long Sleeve",
