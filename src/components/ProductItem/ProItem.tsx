@@ -8,6 +8,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { DECREMENT, INCREMENT, DELETE } from '../../store/slices/ProductSlice';
+import { Link } from 'react-router-dom';
 
 interface ProductType{
     products: ProductTypes[];
@@ -15,12 +16,13 @@ interface ProductType{
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
+        display:'flex',
     },
     paper: {
       padding: theme.spacing(2),
       display: 'flex',
       margin: "2rem",
+      width:'100%',
       background: "#363535",
       borderRadius: '1.6rem'
     },
@@ -35,13 +37,19 @@ export const ProductItem = () => {
    )
    const dispatch = useDispatch()
     return (
-        <div>
+        <div className={classes.root}>
            <div>
                <img src={gucciCart} alt="gucci" className="gucciImg"/>
                       
-          <div className={classes.root}>
+          <div>
+
       <Grid container spacing={3}>
-        <Grid item xs={7}>
+        <Grid item xs={12}>
+            <ul className="util">
+                <li>Name</li>
+                <li>Quantity</li>
+                <li>Price</li>
+            </ul>
           {
               productFilter.map((product, i:number) => (
                   <Paper className={classes.paper} key={i}>
@@ -74,7 +82,13 @@ export const ProductItem = () => {
                </div> 
                </div>
                {/* /right side// */}
-               <div></div>
+               <div className="right">
+        <span>$&nbsp;{productFilter.reduce(
+            (acc , current) => (acc += current.price * current.count),
+            0
+        )}</span>
+        <Link to="/">Back</Link>
+               </div>
                </div>
     )
 }
