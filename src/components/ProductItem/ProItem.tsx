@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       margin: "2rem",
       width:'100%',
-      background: "#363535",
+      background: 'linear-gradient(90deg, rgba(55,54,54,1) 11%, rgba(154,150,150,1) 46%, rgba(83,83,83,1) 88%, rgba(103,103,103,1) 100%)',
       borderRadius: '1.6rem'
     },
   }),
@@ -38,18 +38,17 @@ export const ProductItem = () => {
    const dispatch = useDispatch()
     return (
         <div className={classes.root}>
-           <div>
-               <img src={gucciCart} alt="gucci" className="gucciImg"/>
-                      
+           <div className="left">
+               <h3 className="shopping">Shopping Cart</h3>
+          
           <div>
 
       <Grid container spacing={3}>
         <Grid item xs={12}>
-            <ul className="util">
-                <li>Name</li>
-                <li>Quantity</li>
-                <li>Price</li>
-            </ul>
+          <span className="total">totol: $&nbsp;{productFilter.reduce(
+            (acc , current) => (acc += current.price * current.count),
+            0
+        )}</span>
           {
               productFilter.map((product, i:number) => (
                   <Paper className={classes.paper} key={i}>
@@ -81,14 +80,7 @@ export const ProductItem = () => {
       </Grid>
                </div> 
                </div>
-               {/* /right side// */}
-               <div className="right">
-        <span>$&nbsp;{productFilter.reduce(
-            (acc , current) => (acc += current.price * current.count),
-            0
-        )}</span>
-        <Link to="/">Back</Link>
-               </div>
+           
                </div>
     )
 }

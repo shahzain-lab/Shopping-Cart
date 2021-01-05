@@ -56,6 +56,27 @@
     outline: none;
 }
 /* //Items/ */
+.left{
+    width: 60%;
+}
+.shopping{
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #959595;
+    padding: 1rem 2rem;
+}
+.total{
+    margin: 10px 0;
+    padding: 10px 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 7px;
+    float: right;
+    color: #cccaca;
+    text-transform: uppercase;background: rgb(55,54,54);
+    background: linear-gradient(90deg, rgba(55,54,54,1) 11%, rgba(154,150,150,1) 46%, rgba(83,83,83,1) 88%, rgba(103,103,103,1) 100%);
+}
 .gucciImg{
     width: 100%;
     height: 20rem;
@@ -65,22 +86,7 @@
     border: 2px solid #959595;
     border-radius:50%;
 }
-.util{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #2e2e2e;
-    margin: 0 1rem;
-    margin-left: 8%;
-    border-radius: 1rem;
-    padding: 1.6rem 0;
-}
-.util li{
-    list-style: none;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #adadad;
-}
+
 .itemDiv{
     width: 100%;
     display: flex;
@@ -94,29 +100,28 @@
     align-items: center;
 }
 .itemDiv h3{
-    /* padding-left: 15%; */
     font-size: 1.9rem;
     color: #b8b8b8;
 }
 .count{
-    color: #b8b8b8;
+    color: #dbdbdb;
     font-weight: bold;
     font-size: 1.4rem;
 }
 .decrement, .increment{
-    padding: 0 .5rem;
+    padding: 0% 6%;
     background: #5d5b5b;
     color: #ffff;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 7px;
     cursor: pointer;
 }
 .decremented{
-    padding: 0 .5rem;
+    padding: 0% 6%;
     background: #5d5b5b;
     color: #ffff;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 7px;
     cursor: not-allowed;
@@ -124,7 +129,7 @@
 .price{
     font-size: 1.4rem;
     font-weight: bold;
-    color: #959595;
+    color: #c2bfbf;
 }
 .delete{
     font-size: 1.5rem;
@@ -138,8 +143,4 @@
 }
 .delete:hover{
     background: #4e4e4e;
-}
-/* /right side// */
-.right{
-    width: 40%;
 }
