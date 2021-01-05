@@ -13,7 +13,7 @@ const productSlice = createSlice({
                }else
                return{
                    ...product,
-                   addded: true,
+                   added: true,
                }
            })
        },

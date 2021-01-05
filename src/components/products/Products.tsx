@@ -3,8 +3,9 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import {ProductTypes} from '../../types/Producttypes';
+import { ADD } from '../../store/slices/ProductSlice';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,7 +31,9 @@ interface ProductType{
 
 export const Product = () => {
     const classes = useStyles();
-    const {products} = useSelector((state: ProductType) => state)
+    const {products} = useSelector((state: ProductType) => state);
+     const dispatch = useDispatch()
+
     return(
         <div>
          <h4 className="proHead"> Discover the Collection of Men's T-Shirts </h4>
@@ -47,8 +50,11 @@ export const Product = () => {
                     <div className="proDesc">
              <h3>{product.name}</h3>
              <p>price: ${product.price}</p>
-             <button>
-               
+             <button
+              onClick={() => dispatch(ADD(product))}
+              disabled={product.added ? true : false}
+              >
+              {product.added ? 'Added' : "Add to cart"}  
              </button>
              </div>
              </Paper>

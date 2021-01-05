@@ -4,8 +4,20 @@ import gucci from '../../images/gucci.png';
 import shoppingCart from '../../images/shoppingCart.png';
 //css
 import '../bascket.css';
+///toolkit
+import { useSelector } from 'react-redux';
+import { ProductTypes } from '../../types/Producttypes';
+
+interface ProductType{
+    products: ProductTypes[]
+}
 
 export const NavBar =()=> {
+    
+    const {products} = useSelector((state: ProductType) => state)
+    const filterItem = products.filter(product => 
+        product.added === true
+    ).length
     return(
         <div>
           
@@ -15,7 +27,7 @@ export const NavBar =()=> {
         <div className="navCart">
         
         <img src={shoppingCart} className=" cart" alt="cart"/>
-        <p>0</p>
+    <p>{filterItem}</p>
         </div>
 </nav>
         </div>

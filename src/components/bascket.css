@@ -20,6 +20,7 @@
     border-radius: 50%;
     color: #858282;
     font-weight: bold;
+    justify-content: center;
     
 }
 .navCart img{
@@ -43,4 +44,14 @@
     color: #adadad;
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+.proDesc button{
+    font-size: 1.3rem;
+    padding:.5rem 1rem;
+    border-radius: .6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #adadad;
+    background-color: #4e4e4e;
+    outline: none;
 }
