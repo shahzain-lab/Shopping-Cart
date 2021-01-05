@@ -100,7 +100,7 @@
     align-items: center;
 }
 .itemDiv h3{
-    font-size: 1.9rem;
+    font-size: 30px;
     color: #b8b8b8;
 }
 .count{
@@ -143,4 +143,17 @@
 }
 .delete:hover{
     background: #4e4e4e;
+}
+.btnLink{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 3rem;
+    background: #4e4e4e;
+    font-size: 1.5rem;
+    padding: .7rem 2.3rem;
+    border-radius: 1rem;
+}
+.btnLink:hover{
+    list-style: none;
 }

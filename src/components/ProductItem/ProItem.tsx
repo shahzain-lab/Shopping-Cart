@@ -80,7 +80,7 @@ export const ProductItem = () => {
       </Grid>
                </div> 
                </div>
-           
+              <Link className="btnLink" to="/">Back</Link>
                </div>
     )
 }
