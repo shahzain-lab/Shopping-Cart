@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit';
 import { initialState } from '../initialState/initialState';
 
 
-export const productSlice = createSlice({
+const productSlice = createSlice({
     name: "products",
     initialState,
     reducers: {
@@ -16,6 +16,44 @@ export const productSlice = createSlice({
                    addded: true,
                }
            })
+       },
+       DELETE:(state,action) => {
+           state.map(product => {
+            if(product.id !== action.payload){
+                   return product
+            }else
+            return{
+                ...product,
+                added: false,
+            }
+           })
+       },
+       INCREMENT: (state,action) => {
+           state.map(product => {
+               if(product.id !== action.payload){
+                   return product
+               }else 
+               return{
+                   ...product,
+                   count: product.count + 1,
+               }
+           })
+       },
+       DECREMENT: (state , action)=>{
+           state.map(product => {
+               if(product.id !== action.payload){
+                 return product
+               }else
+               return{
+                   ...product,
+                   count: product.count - 1,
+               }
+           })
        }
     }
-})
+});
+
+
+export const {ADD ,DELETE ,INCREMENT ,DECREMENT} = productSlice.actions;
+
+export default productSlice.reducer;

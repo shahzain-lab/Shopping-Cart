@@ -3,7 +3,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { initialState } from '../../store/initialState/initialState';
+import { useSelector } from 'react-redux';
 import {ProductTypes} from '../../types/Producttypes';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const Product = () => {
     const classes = useStyles();
+    const {products} = useSelector((state: ProductTypes[]) => state)
     return(
         <div>
          <h4 className="proHead"> Discover the Collection of Men's T-Shirts </h4>
