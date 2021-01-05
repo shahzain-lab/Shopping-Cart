@@ -7,7 +7,7 @@ const productSlice = createSlice({
     initialState,
     reducers: {
        ADD: (state,action) => {
-           state.map(product => {
+          return state.map(product => {
                if(product.id !== action.payload.id){
                    return product
                }else
@@ -18,7 +18,7 @@ const productSlice = createSlice({
            })
        },
        DELETE:(state,action) => {
-           state.map(product => {
+           return state.map(product => {
             if(product.id !== action.payload){
                    return product
             }else
@@ -29,7 +29,7 @@ const productSlice = createSlice({
            })
        },
        INCREMENT: (state,action) => {
-           state.map(product => {
+         return state.map(product => {
                if(product.id !== action.payload){
                    return product
                }else 
@@ -40,7 +40,7 @@ const productSlice = createSlice({
            })
        },
        DECREMENT: (state , action)=>{
-           state.map(product => {
+           return state.map(product => {
                if(product.id !== action.payload){
                  return product
                }else

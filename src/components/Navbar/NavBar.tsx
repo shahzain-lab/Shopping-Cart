@@ -9,13 +9,13 @@ import { useSelector } from 'react-redux';
 import { ProductTypes } from '../../types/Producttypes';
 
 interface ProductType{
-    products: ProductTypes[]
+    products: ProductTypes[];
 }
 
 export const NavBar =()=> {
     
-    const {products} = useSelector((state: ProductType) => state)
-    const filterItem = products.filter(product => 
+    const {products} = useSelector((state: ProductType) => state);
+    const filterItem = products.filter((product) => 
         product.added === true
     ).length
     return(
