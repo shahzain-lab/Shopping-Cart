@@ -16,7 +16,7 @@ export const initialState: ProductTypes[] = [
         price: 250,
         image: images.shirt2,
         count: 1,
-        added: false
+        added: true
     },
     {
         id: 3,
