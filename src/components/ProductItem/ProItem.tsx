@@ -44,7 +44,7 @@ export const ProductItem = () => {
 
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <span className="total">totol: $&nbsp;{productFilter.reduce(
+          <span className="total">total: $&nbsp;{productFilter.reduce(
             (acc , current) => (acc += current.price * current.count),
             0
         )}</span>
