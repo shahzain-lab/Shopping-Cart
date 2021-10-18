@@ -1,2 +1,2 @@
-export {NavBar} from './Navbar/NavBar';
-export {Product} from './products/Products';
+export { CombineComponents } from './combine';
+export { ProductItem } from './ProductItem/ProItem';

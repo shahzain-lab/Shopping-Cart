@@ -9,6 +9,20 @@
     border-radius: 50%;
     margin:0 .5rem;
 }
+.navCart p{
+    position:absolute;
+    bottom: 0;
+    right: 5%;
+    width: 1.7rem;
+    height: 1.5rem;
+    text-align: center;
+    background: #fbd80f;
+    border-radius: 50%;
+    color: #858282;
+    font-weight: bold;
+    justify-content: center;
+    
+}
 .navCart img{
     width: 90%;
 }
@@ -20,4 +34,125 @@
     border-left: .6rem solid #3a3a3a;
     border-bottom: 5px solid #3a3a3a;
     margin: 1rem 2rem;
+}
+.proDesc{
+    border-left: 10px solid #797979;
+    padding: 1rem;
+}
+.proDesc p{
+    color: #adadad;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.proDesc button{
+    font-size: 1.3rem;
+    padding:.5rem 1rem;
+    border-radius: .6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #adadad;
+    background-color: #4e4e4e;
+    outline: none;
+}
+/* //Items/ */
+.left{
+    width: 60%;
+}
+.shopping{
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #959595;
+    padding: 1rem 2rem;
+}
+.total{
+    margin: 10px 0;
+    padding: 10px 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 7px;
+    float: right;
+    color: #cccaca;
+    text-transform: uppercase;background: rgb(55,54,54);
+    background: linear-gradient(90deg, rgba(55,54,54,1) 11%, rgba(154,150,150,1) 46%, rgba(83,83,83,1) 88%, rgba(103,103,103,1) 100%);
+}
+.gucciImg{
+    width: 100%;
+    height: 20rem;
+}
+.itemImg{
+    width:12%;
+    border: 2px solid #959595;
+    border-radius:50%;
+}
+
+.itemDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logics{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.itemDiv h3{
+    font-size: 30px;
+    color: #b8b8b8;
+}
+.count{
+    color: #dbdbdb;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.decrement, .increment{
+    padding: 0% 6%;
+    background: #5d5b5b;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.decremented{
+    padding: 0% 6%;
+    background: #5d5b5b;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: not-allowed;
+}
+.price{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c2bfbf;
+}
+.delete{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fffdfd;
+    border: 3px dotted #797979;
+    padding: .6% 6%;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .2s;
+}
+.delete:hover{
+    background: #4e4e4e;
+}
+.btnLink{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 3rem;
+    background: #4e4e4e;
+    font-size: 1.5rem;
+    padding: .7rem 2.3rem;
+    border-radius: 1rem;
+}
+.btnLink:hover{
+    list-style: none;
 }

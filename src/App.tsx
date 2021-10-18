@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import {NavBar , Product} from './components/index';
+import {CombineComponents , ProductItem} from './components/index';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Product />
-    </div>
+    <Router>
+       <Routes>
+         <Route path="/" element={<CombineComponents />}/>
+         <Route path="/bascket" element={<ProductItem />} ></Route>
+      </Routes>
+    </Router>
   );
 }
 
